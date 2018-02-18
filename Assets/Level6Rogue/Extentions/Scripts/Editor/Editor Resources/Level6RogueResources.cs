@@ -10,7 +10,7 @@ namespace Level6Rogue.Extentions.Internal
         Logo_Alt
     }
 
-    public static class Level6Rogue_Resources
+    public static class Level6RogueResources
     {
         private static string[] encodedTextures = new string[]
         {
@@ -19,9 +19,9 @@ namespace Level6Rogue.Extentions.Internal
         };
 
         private static Texture2D[] textures;
-        static Level6Rogue_Resources()
+        static Level6RogueResources()
         {
-            textures = Texture_Helpers.DecodeBase64StringArray(encodedTextures);
+            textures = TextureHelpers.DecodeBase64StringArray(encodedTextures);
         }
 
         public static Texture2D GetTexture(ResourcesTextureType type)

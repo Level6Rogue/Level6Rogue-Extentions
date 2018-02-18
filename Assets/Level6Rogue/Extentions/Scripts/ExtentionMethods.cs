@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 /* Code by Level6Rogue (Xzavien Millward)
 Copyright (c) 2017
@@ -53,6 +56,7 @@ namespace Level6Rogue.Extentions
 
         #region Generic Menu
 
+#if UNITY_EDITOR
         public static void OpenMenu(this GenericMenu menu, Rect position, bool showAsContext)
         {
             if (showAsContext)
@@ -67,6 +71,7 @@ namespace Level6Rogue.Extentions
             else
                 menu.AddDisabledItem(content);
         }
+#endif
 
         #endregion Generic Menu
     }

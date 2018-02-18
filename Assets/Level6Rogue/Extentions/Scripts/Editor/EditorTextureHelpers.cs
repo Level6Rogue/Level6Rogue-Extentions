@@ -3,7 +3,7 @@ using UnityEditor;
 
 namespace Level6Rogue.Extentions
 {
-    public static class EditorTexture_Helpers
+    public static class EditorTextureHelpers
     {
         public static void SetTextureReadable(Texture2D texture)
         {

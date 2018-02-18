@@ -17,7 +17,7 @@ namespace Level6Rogue.Extentions
     /// <summary>
     /// A collection of methods used for creating Editor Scriptable Objects at the EditorDefaultResources filepath.
     /// </summary>
-    public static class EditorDefaultResources_Helper
+    public static class EditorDefaultResourcesHelper
     {
         public static readonly string ASSETS_PATH = "Assets";
         public static readonly string EDITOR_DEFAULT_RESOURCES_PATH = "Editor Default Resources";
@@ -67,7 +67,7 @@ namespace Level6Rogue.Extentions
         /// <returns></returns>
         public static T LoadEditorDefaultResourcesAsset<T>(string folderName, string fileName, string extention) where T : ScriptableObject
         {
-            T asset = EditorGUIUtility.Load(Path.Combine(GetEditorDefaultResourcesPath(folderName), EditorScriptableObject_Helpers.AppendExtention(fileName, extention))) as T;
+            T asset = EditorGUIUtility.Load(Path.Combine(GetEditorDefaultResourcesPath(folderName), EditorScriptableObjectHelpers.AppendExtention(fileName, extention))) as T;
             return asset;
         }
 
@@ -82,9 +82,9 @@ namespace Level6Rogue.Extentions
         public static T CreateEditorDefaultResourcesAsset<T>(string folderName, string fileName, string extention) where T : ScriptableObject
         {
             CreateEditorDefaultResourcesSubFolder(folderName);
-            string name = EditorScriptableObject_Helpers.AppendExtention(fileName, extention);
+            string name = EditorScriptableObjectHelpers.AppendExtention(fileName, extention);
 
-            T asset = EditorScriptableObject_Helpers.CreateAsset<T>(Path.Combine(GetEditorDefaultResourcesPath(folderName), name));
+            T asset = EditorScriptableObjectHelpers.CreateAsset<T>(Path.Combine(GetEditorDefaultResourcesPath(folderName), name));
             Debug.Log(fileName + " Asset Created");
 
             return asset;

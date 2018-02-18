@@ -4,7 +4,7 @@ using System.IO;
 
 namespace Level6Rogue.Extentions
 {
-    public static class Editor_Helpers
+    public static class EditorHelpers
     {
         #region Textures
 
@@ -53,7 +53,7 @@ namespace Level6Rogue.Extentions
 
                 AssetDatabase.Refresh();
                 if (path.StartsWith(Application.dataPath))
-                    return AssetDatabase.LoadAssetAtPath(Path_Helpers.ApplicationPathToRelative(path), typeof(Texture2D));
+                    return AssetDatabase.LoadAssetAtPath(PathHelpers.ApplicationPathToRelative(path), typeof(Texture2D));
             }
             return null;
         }

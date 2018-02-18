@@ -3,7 +3,7 @@ using UnityEditor;
 
 namespace Level6Rogue.Extentions.Internal
 {
-    public static class Level6Rogue_Styles
+    public static class Level6RogueStyles
     {
         public static readonly string Name = "Level6Rogue";
         public static readonly string NameUppercase = Name.ToUpper();
@@ -13,7 +13,7 @@ namespace Level6Rogue.Extentions.Internal
         public static GUIStyle OtherContentLabel { get; private set; }
         public static GUIStyle ContentLabel { get; private set; }
 
-        static Level6Rogue_Styles()
+        static Level6RogueStyles()
         {
             TitleLabel = new GUIStyle();
             TitleLabel.fontSize = 20;

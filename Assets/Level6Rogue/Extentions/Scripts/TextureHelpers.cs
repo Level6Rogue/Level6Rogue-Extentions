@@ -15,7 +15,7 @@ namespace Level6Rogue.Extentions
     /// <summary>
     /// A collections if methods for creating textures.
     /// </summary>
-    public static class Texture_Helpers
+    public static class TextureHelpers
     {
         public const string DEFAULT_NEW_TEXTURE_NAME = "(Generated) New Texture";
 

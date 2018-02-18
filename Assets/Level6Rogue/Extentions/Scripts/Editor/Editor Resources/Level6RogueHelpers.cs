@@ -3,7 +3,7 @@ using UnityEditor;
 
 namespace Level6Rogue.Extentions.Internal
 {
-    public static class Level6Rogue_Helpers
+    public static class Level6RogueHelpers
     {
         public static void DrawBrandDetails(string subLabel, string otherLabel)
         {
@@ -22,7 +22,7 @@ namespace Level6Rogue.Extentions.Internal
 
             GUI.DrawTexture(
                 texturePosition,
-                Level6Rogue_Resources.GetTexture(ResourcesTextureType.Logo), 
+                Level6RogueResources.GetTexture(ResourcesTextureType.Logo), 
                 ScaleMode.ScaleToFit);
 
             Rect titlePosition = new Rect(
@@ -33,18 +33,18 @@ namespace Level6Rogue.Extentions.Internal
 
             EditorGUI.LabelField(
                 titlePosition,
-                Level6Rogue_Styles.NameUppercase,
-                Level6Rogue_Styles.TitleLabel);
+                Level6RogueStyles.NameUppercase,
+                Level6RogueStyles.TitleLabel);
 
            EditorGUI.LabelField(
                 new Rect(titlePosition.x, titlePosition.y + 24, titlePosition.width, 18),
                 subLabel,
-                Level6Rogue_Styles.SubLabel);
+                Level6RogueStyles.SubLabel);
 
             EditorGUI.LabelField(
                 new Rect(titlePosition.x, titlePosition.y + 41, titlePosition.width, 18),
                 otherLabel,
-                Level6Rogue_Styles.OtherContentLabel);
+                Level6RogueStyles.OtherContentLabel);
         }
     } 
 }

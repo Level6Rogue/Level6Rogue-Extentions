@@ -16,7 +16,7 @@ namespace Level6Rogue.Extentions
     /// <summary>
     /// A collection of scripts for help with <see cref="ScriptableObject"/>
     /// </summary>
-    public static class EditorScriptableObject_Helpers
+    public static class EditorScriptableObjectHelpers
     {
         /// <summary>
         /// Creates an Asset of type T at the path

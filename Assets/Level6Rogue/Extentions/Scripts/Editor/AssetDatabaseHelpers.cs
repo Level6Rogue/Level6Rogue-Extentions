@@ -3,7 +3,7 @@ using UnityEditor;
 
 namespace Level6Rogue.Extentions
 {
-    public static class AssetDatabase_Helpers
+    public static class AssetDatabaseHelpers
     {
         /// <summary>
         /// Imports a <see cref="Texture2D"/> from the Asset Database as a <see cref="Sprite"/>.

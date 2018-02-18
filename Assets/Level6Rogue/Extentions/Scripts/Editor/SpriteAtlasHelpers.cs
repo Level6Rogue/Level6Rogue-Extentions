@@ -5,7 +5,7 @@ using Level6Rogue.Extentions;
 
 namespace Level6Rogue.Extentions
 {
-    public static class SpriteAtlas_Helpers
+    public static class SpriteAtlasHelpers
     {
         public static void ImportTextureAsSpriteSheet(Texture2D texture, SpriteMetaData[] atlasData)
         {
@@ -122,7 +122,7 @@ namespace Level6Rogue.Extentions
             int width = (int)rect.width;
             int height = (int)rect.height;
             Color[] colors = atlasTexture.GetPixels();
-            Color[] newColors = Texture_Helpers.GetColoredArray(Color.clear, width, height);
+            Color[] newColors = TextureHelpers.GetColoredArray(Color.clear, width, height);
             for (int x = 0; x < width; x++)
             {
                 for (int y = 0; y < height; y++)
@@ -130,7 +130,7 @@ namespace Level6Rogue.Extentions
                     newColors[y * width + x] = GetColorClamped(colors, (int)rect.x + x, (int)rect.y + y, atlasTexture.width);
                 }
             }
-            return Texture_Helpers.GetTextureFromColors(newColors, width, height, atlasTexture.name);
+            return TextureHelpers.GetTextureFromColors(newColors, width, height, atlasTexture.name);
         }
         static Color GetColorClamped(Color[] colors, int x, int y, int width)
         {

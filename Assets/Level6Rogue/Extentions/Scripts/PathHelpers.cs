@@ -16,7 +16,7 @@ namespace Level6Rogue.Extentions
     /// <summary>
     /// A collection of methods for help with file paths.
     /// </summary>
-    public static class Path_Helpers
+    public static class PathHelpers
     {
         /// <summary>
         /// Converts a <see cref="string"/> application file path to a <see cref="string"/> relative file path.
